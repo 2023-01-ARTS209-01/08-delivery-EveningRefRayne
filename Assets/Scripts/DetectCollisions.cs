@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Debug.Log("Hit: " + collision.gameObject.name);
+        this.gameObject.GetComponent<Driver>().slowDown();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D trig)
     {
-        
+        Debug.Log("Trigger: " + trig.gameObject.name);
+        this.gameObject.GetComponent<Driver>().speedUp();
     }
 }
