@@ -25,8 +25,8 @@ public class Driver : MonoBehaviour
 
     public void speedUp()
     {
-        currentMoveSpeed = baseMoveSpeed * 1.25f;
-        currentTurnSpeed = baseTurnSpeed * 1.15f;
+        currentMoveSpeed = baseMoveSpeed * 1.33f;
+        currentTurnSpeed = baseTurnSpeed * 1.25f;
     }
 
     public void slowDown()
